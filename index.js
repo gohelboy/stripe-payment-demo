@@ -34,8 +34,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: `https://stripe-payment-shop/confirm`,
-    cancel_url: `https://stripe-payment-shop/cancel`,
+    success_url: `https://stripe-payment-shop.netlify.app/confirm`,
+    cancel_url: `https://stripe-payment-shop.netlify.app/cancel`,
   });
   res.json({ id: session.id, url: session.url });
 });
