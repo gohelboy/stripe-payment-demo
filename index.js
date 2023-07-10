@@ -34,10 +34,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: `http://localhost:8000/api/confirm-order?data=${encodeURIComponent(
-      JSON.stringify(additionalData)
-    )}`,
-    cancel_url: "https://localhost:/api/failed-order",
+    success_url: `https://stripe-payment-shop/confirm`,
+    cancel_url: `https://stripe-payment-shop/cancel`,
   });
   res.json({ id: session.id, url: session.url });
 });
