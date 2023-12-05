@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 const stripe = require("stripe")("sk_test_51NQSwQSDGsKHxz6UcMp9Boa4HA0ApNujXADhQ89ONhp3NWuVQNRjyouCq4Gnyd6wXfIFiBXrOaqZux8mDncHpzGs000Tdtfb10");
-const base_url_frontend = "https://stripe-shop-demo.netlify.app/"
+const base_url_frontend = "https://stripe-shop-demo.netlify.app"
 app.use(express.json());
 app.use(cors());
 
